@@ -26,10 +26,10 @@ class SimpleChartView(context: Context, attrs: AttributeSet? = null) : View(cont
     var values: List<Pair<Int, Float>> = emptyList()
         set(value) {
             field = value
-            if (values.sumOf { it.second.toDouble() }.toFloat() != 100F) {
+            if (values.sumOf { it.second.toDouble() }.toFloat() - 100F > 0.001) {
                 throw InvalidColorArgumentsException("Sum of arguments should be equal to 100")
             }
-            invalidate()
+            requestLayout()
         }
 
     private var paint: Paint = Paint().apply {
