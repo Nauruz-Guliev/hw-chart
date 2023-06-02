@@ -26,7 +26,7 @@ class SimpleChartView(context: Context, attrs: AttributeSet? = null) : View(cont
     var values: List<Pair<Int, Float>> = emptyList()
         set(value) {
             field = value
-            if (values.sumOf { it.second.toInt() } != 100) {
+            if (values.sumOf { it.second.toDouble() }.toFloat() != 100F) {
                 throw InvalidColorArgumentsException("Sum of arguments should be equal to 100")
             }
             invalidate()
@@ -174,3 +174,4 @@ class SimpleChartView(context: Context, attrs: AttributeSet? = null) : View(cont
         private const val DEFAULT_TEXT_POSITION = 1.7F
     }
 }
+
