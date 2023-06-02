@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleChartView">
+        <attr name="circleRadius" format="dimension" />
+        <attr name="arcTextSize" format="dimension" />
+        <attr name="arcTextColor" format="color" />
+
+        <attr name="arcTextPosition" format="flags">
+            <flag name="EDGE" value="1" />
+            <flag name="MIDDLE" value="2" />
+            <flag name="END" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>
