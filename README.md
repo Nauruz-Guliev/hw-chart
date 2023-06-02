@@ -3,10 +3,13 @@
 
 #### Задание кастомных атрибутов 
 ```xml
-        app:arcTextSize="20sp"
-        app:circleRadius="240dp"
-        app:arcTextColor="@color/white"
+ <ru.example.gnt.hw_custom_chart.SimpleChartView
+        ...
+        app:arcTextSize="22sp"
+        app:circleRadius="200dp"
+        app:arcTextColor="@color/black"
         app:arcTextPosition="MIDDLE"
+        ... />
 ```
 
 #### Скриншот
