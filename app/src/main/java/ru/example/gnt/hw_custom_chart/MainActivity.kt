@@ -1,19 +1,15 @@
 package ru.example.gnt.hw_custom_chart
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.example.gnt.hw_custom_chart.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-
-        binding.chartView.values =
+        findViewById<SimpleChartView>(R.id.chart_view).values =
             listOf(
                 Pair(Color.RED, 40f),
                 Pair(Color.GREEN, 20f),

@@ -27,7 +27,7 @@ class SimpleChartView(context: Context, attrs: AttributeSet? = null) : View(cont
         set(value) {
             field = value
             if (values.sumOf { it.second.toDouble() }.toFloat() - 100F > 0.001) {
-                throw InvalidColorArgumentsException("Sum of arguments should be equal to 100")
+                throw InvalidColorArgumentsException("Sum of arguments can not be greater than 100")
             }
             requestLayout()
         }
